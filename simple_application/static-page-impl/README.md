@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This directory contains the source code for a simple static single page view implementation using Next.js and React. The interface is designed based on the provided Figma design.
+This directory contains the source code for a simple static single page view implementation using Next.js and React. The interface is designed based on the provided [Figma design](file:///Users/morrislin/Downloads/Fullstack_Software_Engineer_Take_Home_Assignment_2.pdf).
 
 ## Getting Started
 
