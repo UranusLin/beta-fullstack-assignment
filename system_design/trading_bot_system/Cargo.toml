@@ -2,7 +2,6 @@
 members = [
     "packages/trading_bot",
     "packages/data_collection",
-    "packages/event_dispatcher",
     "packages/arbitrage_strategy",
     "packages/trading_module",
     "packages/database_module",

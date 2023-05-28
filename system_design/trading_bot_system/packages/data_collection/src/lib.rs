@@ -1,6 +1,9 @@
 use reqwest;
 use std::future::Future;
 use core::pin::Pin;
+use redis::Commands;
+use redis::Client;
+use redis::Error;
 
 pub struct Exchange {
     pub name: String,
@@ -9,6 +12,22 @@ pub struct Exchange {
 
 pub trait BitcoinPriceGetter {
     fn get_bitcoin_price(&self, timestamp: i64) -> Pin<Box<dyn Future<Output = Result<f64, reqwest::Error>> + Send + '_>>;
+}
+
+pub fn publish_price_to_redis(exchange_name: &str, price: f64) -> Result<(), Error> {
+    // Create a client
+    let client = Client::open("redis://127.0.0.1/")?;
+
+    // Connect to Redis
+    let mut con = client.get_connection()?;
+
+    // Construct the channel name from the exchange name
+    let channel_name = format!("{}_price", exchange_name);
+
+    // Publish the price data to the channel
+    con.publish(&channel_name, price.to_string())?;
+
+    Ok(())
 }
 
 impl BitcoinPriceGetter for Exchange {
@@ -20,6 +39,12 @@ impl BitcoinPriceGetter for Exchange {
 
             // Parse the response into a f64 price
             let price: f64 = response.text().await?.parse().unwrap();
+
+            // Publish the price to Redis
+            match publish_price_to_redis(&self.name, price) {
+                Ok(_) => println!("Price data from {} published to Redis successfully", self.name),
+                Err(err) => eprintln!("Failed to publish price data from {} to Redis: {}", self.name, err),
+            };
 
             Ok(price)
         })
