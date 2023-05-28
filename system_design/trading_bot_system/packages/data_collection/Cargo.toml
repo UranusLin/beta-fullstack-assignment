@@ -1,8 +1,12 @@
 [package]
 name = "data_collection"
 version = "0.1.0"
-edition = "2023"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+reqwest = "0.11.18"
+futures = "0.3.28"
+redis = "0.23.0"
+trading_bot_lib = { path = "../trading_bot_lib" }
