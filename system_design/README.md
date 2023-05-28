@@ -7,7 +7,7 @@ This directory contains the system design for a simple trading bot that arbitrag
 ## File Structure
 
 - `solution.pdf`: This PDF document details the design choices and trade-offs made in designing the trading bot.
-- ``: This file contains the diagram of the system design.
+- `trading_bot_system`: This folder contains the code implement via Rust of the system design.
 
 ## How to Understand the Design
 
