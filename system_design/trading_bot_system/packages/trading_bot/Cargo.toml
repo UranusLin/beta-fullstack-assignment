@@ -6,3 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+futures = "0.3.28"
+serde_json = "1.0"
+trading_bot_lib = { path = "../trading_bot_lib" }
+
+[dependencies.redis]
+version = "0.23"
+features = ["aio", "tokio-comp"]
+
+[dependencies.reqwest]
+version = "0.11"
+features = ["json"]
