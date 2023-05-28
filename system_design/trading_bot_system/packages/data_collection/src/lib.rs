@@ -1,20 +1,16 @@
+// use redis::ErrorKind;
 use reqwest;
 use std::future::Future;
 use core::pin::Pin;
 use redis::Commands;
 use redis::Client;
-use redis::Error;
-
-pub struct Exchange {
-    pub name: String,
-    pub api_url: String,
-}
+use trading_bot_lib::Exchange;
 
 pub trait BitcoinPriceGetter {
     fn get_bitcoin_price(&self, timestamp: i64) -> Pin<Box<dyn Future<Output = Result<f64, reqwest::Error>> + Send + '_>>;
 }
 
-pub fn publish_price_to_redis(exchange_name: &str, price: f64) -> Result<(), Error> {
+pub fn publish_price_to_redis(exchange_name: &str, price: f64) -> Result<(), redis::RedisError> {
     // Create a client
     let client = Client::open("redis://127.0.0.1/")?;
 
