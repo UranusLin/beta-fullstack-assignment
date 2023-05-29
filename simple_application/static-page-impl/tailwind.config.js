@@ -9,10 +9,13 @@ module.exports = {
     extend: {
       colors: {
         'custom-color': '#2A2B38',
+        'active-green': '#48DA82',
       },
       spacing: {
         '120': '7.5rem',
-      }
+        '52' : '52px',
+        '11' : '11px',
+      },
     },
   },
   plugins: [],
