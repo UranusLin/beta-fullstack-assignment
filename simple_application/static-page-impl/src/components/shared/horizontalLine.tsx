@@ -1,7 +1,11 @@
+interface HorizontalLineProps {
+    width: string;
+}
 
-
-export default function HorizontalLine({width}) {
+const HorizontalLine: React.FC<HorizontalLineProps> = ({ width }) => {
     return (
         <div className={`h-px ${width} bg-horizontal-line`} />
-    )
+    );
 }
+
+export default HorizontalLine;

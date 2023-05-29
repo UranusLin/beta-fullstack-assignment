@@ -9,8 +9,8 @@ export default function VotingStatus() {
            </div>
            <div className={`w-884 pe-10 flex items-center justify-end`}>
                <div className={`grid justify-items-end`}>
-                    <Text text={`Voting Power`} size={`text-xs`} />
-                    <Text text={`00,000.00 VOTE`} size={`text-sm`} />
+                    <Text text={`Voting Power`} size={`text-xs`} other={``}/>
+                    <Text text={`00,000.00 VOTE`} size={`text-sm`} other={``}/>
                </div>
            </div>
            <div className={`pe-10 flex items-center justify-end space-x-2`}>

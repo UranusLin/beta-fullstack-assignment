@@ -14,11 +14,11 @@ export default function Content() {
             <div className={`absolute top-214 right-10`}>
                 <HorizontalLine width={`w-804`} />
             </div>
-            <div>
-                <Text text={`Sed ut perspiciatis unde omnis iste natus error sit voluptatem`} size={`text-sm`} other={`font-semibold absolute top-238 left-10 `}/>
+            <div className={`absolute top-238 left-10 `}>
+                <Text text={`Sed ut perspiciatis unde omnis iste natus error sit voluptatem`} size={`text-sm`} other={`font-semibold`}/>
             </div>
-            <div>
-                <Text other={`absolute left-10 right-10 top-268 pt-1.5`} text={`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur`} size={`text-sm`} />
+            <div className={`absolute left-10 right-10 top-268 pt-1.5`}>
+                <Text text={`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur`} size={`text-sm`} other={``} />
             </div>
         </div>
     )

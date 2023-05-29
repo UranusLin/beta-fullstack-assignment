@@ -1,9 +1,15 @@
+interface TextProps {
+    text: string;
+    size: string;
+    other: string;
+}
 
-
-export default function Text({text, size, other}) {
+const Text: React.FC<TextProps> = ({ text, size, other }) => {
     return (
         <h1 className={`text-custom-color text-left leading-6 ${size} ${other}`}>
             {text}
         </h1>
-    )
+    );
 }
+
+export default Text;
