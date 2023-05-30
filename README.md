@@ -1,4 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment) [![codecov](https://codecov.io/gh/username/repository/branch/master/graph/badge.svg)](https://codecov.io/gh/username/repository)
+![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment) [![codecov](https://codecov.io/gh/UranusLin/beta-fullstack-assignment/branch/master/graph/badge.svg)](https://codecov.io/gh/UranusLin/beta-fullstack-assignment)
 
 # beta-fullstack-assignment
 
