@@ -6,21 +6,23 @@ This is a event-driven system for cryptocurrency arbitrage, built with Rust.
 
 This system is made up of several modules, each handling a specific aspect of the arbitrage system.
 
-1. **Data Collection**: This module is responsible for gathering price data from different cryptocurrency exchanges. It publishes the collected data to a Redis channel.
+* **Data Collection (packages/data_collection)**: This package is responsible for gathering price data from different cryptocurrency exchanges. It publishes the collected data to a Redis channel.
 
-2. **Arbitrage Strategy Module**: This module subscribes to the Redis channel to receive the price data. It applies arbitrage algorithms on the received data and publishes potential arbitrage opportunities.
+* **Arbitrage Strategy Module (packages/arbitrage_strategy)**: This package subscribes to the Redis channel to receive the price data. It applies arbitrage algorithms on the received data and publishes potential arbitrage opportunities.
 
-3. **Trading Module**: This module listens for potential arbitrage opportunities and executes the trades.
+* **Trading Module (packages/trading_module)**: This package listens for potential arbitrage opportunities and executes the trades.
 
-4. **Database Module**: This module persists price data, arbitrage opportunities, and trade results to a database.
+* **Database Module (packages/database_module)**: This package persists price data, arbitrage opportunities, and trade results to a database.
 
-5. **Backtesting Module**: Allows for testing of different arbitrage strategies with historical data.
+* **Backtesting Module (packages/backtesting)**: This package allows for testing of different arbitrage strategies with historical data.
 
-6. **Monitoring Module**: Monitors the operation of the whole system and alerts if something goes wrong.
+* **Monitoring Module (packages/monitoring_module)**: This package monitors the operation of the whole system and alerts if something goes wrong.
 
-7. **Logging Module**: Handles logging of various events in the system.
+* **Logging Module (packages/logging_module)**: This package handles logging of various events in the system.
 
-8. **Notification Module**: Sends notifications about trade results or system alerts to designated channels (e.g., Slack, Telegram).
+* **Notification Module (packages/notification_module)**: This package sends notifications about trade results or system alerts to designated channels (e.g., Slack, Telegram).
+
+* **Trading Bot Library (packages/trading_bot_lib)**: This package contains the core libraries and algorithms used by the trading module for executing the trades.
 
 ## Development Environment
 
