@@ -22,29 +22,18 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
       working-directory: system_design/trading_bot_system
-    - name: Install toolchain
-      id: toolchain
-      uses: actions-rs/toolchain@v1
+    - name: rust-grcov
+      # You may pin to the exact commit or the version.
+      # uses: actions-rs/grcov@bb47b1ed7883a1502fa6875d562727ace2511248
+      uses: actions-rs/grcov@v0.1.5
+    - name: Codecov
+      # You may pin to the exact commit or the version.
+      # uses: codecov/codecov-action@81cd2dc8148241f03f5839d295e000b8f761e378
+      uses: codecov/codecov-action@v3.1.0
       with:
-        toolchain: stable
-        target: x86_64-unknown-linux-musl
-        override: true
-        components: llvm-tools-preview
-    - name: Download grcov
-      run: |
-        mkdir -p "${HOME}/.local/bin"
-        curl -sL https://github.com/mozilla/grcov/releases/download/v0.8.10/grcov-x86_64-unknown-linux-gnu.tar.bz2 | tar jxf - -C "${HOME}/.local/bin"
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-    - name: Run xtask coverage
-      uses: actions-rs/cargo@v1
-      with:
-        command: xtask
-        args: coverage
-
-    - name: Upload to codecov.io
-      uses: codecov/codecov-action@v3
-      with:
-        files: coverage/*.lcov
-
+        # Repository upload token - get it from codecov.io. Required only for private repositories
+        # token: # optional
+        # Specify whether the Codecov output should be verbose
+        verbose: true
+        fail_ci_if_error: true
       
