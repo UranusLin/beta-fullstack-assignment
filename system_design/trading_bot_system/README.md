@@ -1,3 +1,4 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment)
 # Trading Bot System
 
 This is a event-driven system for cryptocurrency arbitrage, built with Rust.

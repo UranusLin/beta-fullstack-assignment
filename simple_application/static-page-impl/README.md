@@ -1,3 +1,5 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment)
+
 # Simple Application
 
 ## Introduction
