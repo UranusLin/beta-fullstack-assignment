@@ -23,7 +23,6 @@ jobs:
       run: cargo test --verbose
       working-directory: system_design/trading_bot_system
     - name: Upload coverage reports to Codecov
-      working-directory: system_design/trading_bot_system
       uses: codecov/codecov-action@v3
      
       
