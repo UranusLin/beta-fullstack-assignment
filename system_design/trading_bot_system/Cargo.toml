@@ -1,6 +1,5 @@
 [workspace]
 members = [
-    "packages/trading_bot",
     "packages/data_collection",
     "packages/arbitrage_strategy",
     "packages/trading_module",
