@@ -1,4 +1,5 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment)
+![GitHub last commit](https://img.shields.io/github/last-commit/UranusLin/beta-fullstack-assignment) [![codecov](https://codecov.io/gh/username/repository/branch/master/graph/badge.svg)](https://codecov.io/gh/username/repository)
+
 # Trading Bot System
 
 This is a event-driven system for cryptocurrency arbitrage, built with Rust.
