@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 futures = "0.3.28"
 serde_json = "1.0"
+mockito = "1.0.2"
+tokio = {version = "1", features = ["full"]}
 trading_bot_lib = { path = "../trading_bot_lib" }
 
 [dependencies.redis]
